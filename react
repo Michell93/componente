@@ -1,1 +1,16 @@
+componentWillUnmount() {
+    clearInterval(this.interval);
+  }
 
+  render() {
+    return (
+      <div>
+        Segundos: {this.state.seconds}
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Timer />,
+  document.getElementById('timer-example')
